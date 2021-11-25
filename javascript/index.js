@@ -11,7 +11,7 @@ var firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-//hejhejhej test
+
 //Set database variable
 let firebaseDatabase = firebase.database()
 
