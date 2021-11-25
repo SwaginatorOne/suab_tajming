@@ -43,24 +43,32 @@ function get() {
     })
 }
 
+
 function login() {
     let email = document.getElementById('email').value
     let password = document.getElementById('password').value
 
-    firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-            // Signed in
-            var user = userCredential.user;
-            // ...
-            alert("Välkommen Nettan")
-        })
-        .catch((error) => {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            alert("Error : " + errorMessage);
-        });
-
-
+    let allUsers = firebaseDatabase.ref().child("users");
+    allUsers.once("value", snap =>{
+      snap.forEach((childSnapshot)=>{
+          if(email == childSnapshot.val().email){
+            if(password == childSnapshot.val().password){
+                if(childSnapshot.val().privileges == "administrator"){
+                    //om det är admin
+                    alert("admin");
+                    console.log("admiiiiiiiiiiiiiiinnnnnnnnnnn");
+                }else{
+                    //om det inte är admin
+                    alert("inte admin");
+                }
+            }else{
+                //om email är rätt men lösen fel
+            }
+          }else{
+            // om email är fel
+          }
+      });
+    });
 }
 
 //Nu testar jag om det här fungerar
