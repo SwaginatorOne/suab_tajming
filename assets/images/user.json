@@ -1,20 +1,15 @@
 {
     "users": [{
-      "name": "Anette Törnblom",
+      "name": "Anette",
+      "lastname": "Törnblom",
       "privileges": "administrator",
       "email": "anette.tornblom@suab.se",
       "phone":"0730476268"
     }, {
-      "name": "Mohammed Rafi",
-      "age": 21,
-      "email": "mrafi@email.com"
-    }, {
-      "name": "Raja Tamil",
-      "age": 31,
-      "email": "rtamil@email.com"
-    }, {
-      "name": "Sundar Pichai",
-      "age": 21,
-      "email": "spichai@email.com"
+      "name": "admin",
+      "lastname": "admin",
+      "privileges": "administrator",
+      "email": "admin@hig.se",
+      "phone":"0730546913"
     }]
   }
